@@ -1,6 +1,10 @@
-import { Controller, Post, Body, ValidationPipe } from '@nestjs/common';
+import { Controller, Post, Body, ValidationPipe, UseGuards } from '@nestjs/common';
 import { AuthCredentialsDto } from './dto/auth-credentials.dto';
 import { AuthService } from './auth.service';
+import { GetUser } from './get-user.decorator';
+import { User } from './user.entity';
+import { AuthGuard } from '@nestjs/passport';
+import { AdvancedConsoleLogger } from 'typeorm';
 
 @Controller('auth')
 export class AuthController {
