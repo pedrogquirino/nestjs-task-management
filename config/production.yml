@@ -1,3 +1,6 @@
+server:
+  origin: http://nestjs-task-management-frontend-pedro.s3-website-sa-east-1.amazonaws.com
+
 db:
   synchronize: false
   

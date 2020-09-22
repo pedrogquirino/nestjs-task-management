@@ -1,17 +1,17 @@
 import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, Unique, OneToMany } from "typeorm";
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 import { Task } from "src/tasks/task.entity";
 
 
 @Entity()
-@Unique(['userName'])
+@Unique(['username'])
 export class User extends BaseEntity {
     
     @PrimaryGeneratedColumn()
     id: number;
 
     @Column()
-    userName: string;
+    username: string;
     
     @Column()
     password: string;

@@ -32,7 +32,7 @@ export class TaskRepository extends Repository<Task> {
             return tasks;
 
         } catch(error) {
-            this.logger.error(`Failed to get tasks for user "${ user.userName }", Filters: ${JSON.stringify(filterDto)}`, error.stack);
+            this.logger.error(`Failed to get tasks for user "${ user.username }", Filters: ${JSON.stringify(filterDto)}`, error.stack);
             throw new InternalServerErrorException();
         }
         
